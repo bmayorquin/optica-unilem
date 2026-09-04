@@ -256,4 +256,4 @@ const Payment = ({
   )
 }
 
-export default Pago
+export default Payment
