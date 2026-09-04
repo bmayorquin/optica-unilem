@@ -53,7 +53,7 @@ export default async function RelatedProducts({
           Productos relacionados
         </span>
         <p className="text-2xl-regular text-ui-fg-base max-w-lg">
-          You might also want to check out these products.
+          Puede que también te interesen estos productos.
         </p>
       </div>
 
