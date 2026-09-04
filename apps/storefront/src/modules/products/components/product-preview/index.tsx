@@ -15,15 +15,6 @@ export default async function ProductPreview({
   isFeatured?: boolean
   region: HttpTypes.StoreRegion
 }) {
-  // const pricedProduct = await listProducts({
-  //   regionId: region.id,
-  //   queryParams: { id: [product.id!] },
-  // }).then(({ response }) => response.products[0])
-
-  // if (!pricedProduct) {
-  //   return null
-  // }
-
   const { cheapestPrice } = getProductPrice({
     product,
   })
@@ -37,11 +28,24 @@ export default async function ProductPreview({
           size="full"
           isFeatured={isFeatured}
         />
-        <div className="flex txt-compact-medium mt-4 justify-between">
-          <Text className="text-ui-fg-subtle" data-testid="product-title">
+        <div className="flex flex-col mt-4 gap-y-1">
+          {product.type?.value && (
+            <Text
+              className="text-xs font-bold uppercase tracking-wide text-unilen-black"
+              data-testid="product-brand"
+            >
+              {product.type.value}
+            </Text>
+          )}
+
+          <Text
+            className="text-ui-fg-subtle text-sm uppercase"
+            data-testid="product-title"
+          >
             {product.title}
           </Text>
-          <div className="flex items-center gap-x-2">
+
+          <div className="mt-1">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
         </div>
