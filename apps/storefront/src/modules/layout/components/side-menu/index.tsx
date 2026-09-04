@@ -1,6 +1,6 @@
 "use client"
 
-import { Popover, PopoverPanel, Transition } from "@headlessui/react"
+import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/react"
 import { XMark } from "@medusajs/icons"
 import { Text, useToggleState } from "@medusajs/ui"
 import { Fragment } from "react"
@@ -38,7 +38,7 @@ const SideMenu = ({
         {({ open, close }) => (
           <>
             {/* MENU BUTTON */}
-            <Popover.Button
+            <PopoverButton
               data-testid="nav-menu-button"
               className="group h-full flex items-center gap-3 focus:outline-none"
             >
@@ -50,7 +50,7 @@ const SideMenu = ({
                 <span className="block h-[1px] w-7 bg-unilen-black transition-all duration-300 group-hover:w-4" />
                 <span className="block h-[1px] w-5 bg-unilen-red transition-all duration-300 group-hover:w-7" />
               </span>
-            </Popover.Button>
+            </PopoverButton>
 
             {/* BACKDROP */}
             {open && (
