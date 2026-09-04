@@ -120,7 +120,7 @@ const CartDropdown = ({
             data-testid="nav-cart-dropdown"
           >
             <div className="p-4 flex items-center justify-center">
-              <h3 className="text-large-semi">Cart</h3>
+              <h3 className="text-large-semi">Carrito</h3>
             </div>
 
             {cartState && cartState.items?.length ? (
@@ -173,7 +173,7 @@ const CartDropdown = ({
                                   data-testid="cart-item-quantity"
                                   data-value={item.quantity}
                                 >
-                                  Quantity: {item.quantity}
+                                  Cantidad: {item.quantity}
                                 </span>
                               </div>
 
@@ -192,7 +192,7 @@ const CartDropdown = ({
                             className="mt-1"
                             data-testid="cart-item-remove-button"
                           >
-                            Remove
+                            Eliminar
                           </DeleteButton>
                         </div>
                       </div>
@@ -204,7 +204,7 @@ const CartDropdown = ({
                     <span className="text-ui-fg-base font-semibold">
                       Subtotal{" "}
                       <span className="font-normal">
-                        (excl. taxes)
+                        (sin impuestos)
                       </span>
                     </span>
 
@@ -226,7 +226,7 @@ const CartDropdown = ({
                       size="large"
                       data-testid="go-to-cart-button"
                     >
-                      Go to cart
+                      Ir al carrito
                     </Button>
                   </LocalizedClientLink>
                 </div>
