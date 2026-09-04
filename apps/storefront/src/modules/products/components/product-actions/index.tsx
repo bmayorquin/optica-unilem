@@ -180,7 +180,7 @@ export default function ProductActions({
             ? "Select variant"
             : !inStock || !isValidVariant
             ? "Sin existencias"
-            : "Add to cart"}
+            : "Agregar al carrito"}
         </Button>
         <MobileActions
           product={product}
