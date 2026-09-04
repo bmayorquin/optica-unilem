@@ -22,26 +22,32 @@ const CartDropdown = ({
 }: {
   cart?: HttpTypes.StoreCart | null
 }) => {
-  const [activeTimer, setActiveTimer] = useState<NodeJS.Timer | undefined>(
-    undefined
-  )
+  const [activeTimer, setActiveTimer] = useState<
+    ReturnType<typeof setTimeout> | undefined
+  >(undefined)
+
   const [cartDropdownOpen, setCartDropdownOpen] = useState(false)
 
   const open = () => setCartDropdownOpen(true)
   const close = () => setCartDropdownOpen(false)
 
   const totalItems =
-    cartState?.items?.reduce((acc, item) => {
-      return acc + item.quantity
-    }, 0) || 0
+    cartState?.items?.reduce((acc, item) => acc + item.quantity, 0) || 0
 
   const subtotal = cartState?.subtotal ?? 0
-  const itemRef = useRef<number>(totalItems || 0)
+
+  const itemRef = useRef<number>(totalItems)
 
   const timedOpen = () => {
     open()
 
-    const timer = setTimeout(close, 5000)
+    if (activeTimer) {
+      clearTimeout(activeTimer)
+    }
+
+    const timer = setTimeout(() => {
+      close()
+    }, 5000)
 
     setActiveTimer(timer)
   }
@@ -49,12 +55,12 @@ const CartDropdown = ({
   const openAndCancel = () => {
     if (activeTimer) {
       clearTimeout(activeTimer)
+      setActiveTimer(undefined)
     }
 
     open()
   }
 
-  // Clean up the timer when the component unmounts
   useEffect(() => {
     return () => {
       if (activeTimer) {
@@ -65,13 +71,22 @@ const CartDropdown = ({
 
   const pathname = usePathname()
 
-  // open cart dropdown when modifying the cart items, but only if we're not on the cart page
+  // Open cart dropdown when the number of items changes,
+  // but don't do it while already on the cart page.
   useEffect(() => {
-    if (itemRef.current !== totalItems && !pathname.includes("/cart")) {
+    if (
+      itemRef.current !== totalItems &&
+      !pathname.includes("/cart")
+    ) {
       timedOpen()
     }
+
+    itemRef.current = totalItems
+
+    // timedOpen is intentionally omitted because it is recreated
+    // on every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [totalItems, itemRef.current])
+  }, [totalItems, pathname])
 
   return (
     <div
@@ -80,13 +95,15 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <PopoverButton className="h-full">
-          <LocalizedClientLink
-            className="hover:text-ui-fg-base"
-            href="/cart"
-            data-testid="nav-cart-link"
-          >{`Cart (${totalItems})`}</LocalizedClientLink>
+        <PopoverButton
+          as={LocalizedClientLink}
+          href="/cart"
+          className="h-full hover:text-ui-fg-base"
+          data-testid="nav-cart-link"
+        >
+          {`Cart (${totalItems})`}
         </PopoverButton>
+
         <Transition
           show={cartDropdownOpen}
           as={Fragment}
@@ -105,10 +122,12 @@ const CartDropdown = ({
             <div className="p-4 flex items-center justify-center">
               <h3 className="text-large-semi">Cart</h3>
             </div>
+
             {cartState && cartState.items?.length ? (
               <>
                 <div className="overflow-y-scroll max-h-[402px] px-4 grid grid-cols-1 gap-y-8 no-scrollbar p-px">
                   {cartState.items
+                    .slice()
                     .sort((a, b) => {
                       return (a.created_at ?? "") > (b.created_at ?? "")
                         ? -1
@@ -130,6 +149,7 @@ const CartDropdown = ({
                             size="square"
                           />
                         </LocalizedClientLink>
+
                         <div className="flex flex-col justify-between flex-1">
                           <div className="flex flex-col flex-1">
                             <div className="flex items-start justify-between">
@@ -142,11 +162,13 @@ const CartDropdown = ({
                                     {item.title}
                                   </LocalizedClientLink>
                                 </h3>
+
                                 <LineItemOptions
                                   variant={item.variant}
                                   data-testid="cart-item-variant"
                                   data-value={item.variant}
                                 />
+
                                 <span
                                   data-testid="cart-item-quantity"
                                   data-value={item.quantity}
@@ -154,6 +176,7 @@ const CartDropdown = ({
                                   Quantity: {item.quantity}
                                 </span>
                               </div>
+
                               <div className="flex justify-end">
                                 <LineItemPrice
                                   item={item}
@@ -163,6 +186,7 @@ const CartDropdown = ({
                               </div>
                             </div>
                           </div>
+
                           <DeleteButton
                             id={item.id}
                             className="mt-1"
@@ -174,12 +198,16 @@ const CartDropdown = ({
                       </div>
                     ))}
                 </div>
+
                 <div className="p-4 flex flex-col gap-y-4 text-small-regular">
                   <div className="flex items-center justify-between">
                     <span className="text-ui-fg-base font-semibold">
                       Subtotal{" "}
-                      <span className="font-normal">(excl. taxes)</span>
+                      <span className="font-normal">
+                        (excl. taxes)
+                      </span>
                     </span>
+
                     <span
                       className="text-large-semi"
                       data-testid="cart-subtotal"
@@ -191,7 +219,8 @@ const CartDropdown = ({
                       })}
                     </span>
                   </div>
-                  <LocalizedClientLink href="/cart" passHref>
+
+                  <LocalizedClientLink href="/cart">
                     <Button
                       className="w-full"
                       size="large"
@@ -208,13 +237,17 @@ const CartDropdown = ({
                   <div className="bg-gray-900 text-small-regular flex items-center justify-center w-6 h-6 rounded-full text-white">
                     <span>0</span>
                   </div>
+
                   <span>Your shopping bag is empty.</span>
+
                   <div>
                     <LocalizedClientLink href="/store">
-                      <>
-                        <span className="sr-only">Go to all products page</span>
-                        <Button onClick={close}>Explore products</Button>
-                      </>
+                      <Button onClick={close}>
+                        <span className="sr-only">
+                          Go to all products page
+                        </span>
+                        Explore products
+                      </Button>
                     </LocalizedClientLink>
                   </div>
                 </div>
