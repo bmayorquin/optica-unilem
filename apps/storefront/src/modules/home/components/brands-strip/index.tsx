@@ -1,10 +1,20 @@
 const brands = [
   "Ray-Ban",
   "Oakley",
-  "Vogue",
+  "Vogue Eyewear",
   "Guess",
   "Police",
   "Bolon",
+  "Carrera",
+  "Prada",
+  "Persol",
+  "Michael Kors",
+  "Emporio Armani",
+  "Versace",
+  "Polo Ralph Lauren",
+  "Miu Miu",
+  "Tiffany & Co.",
+  "Swarovski",
 ]
 
 export default function BrandsStrip() {
