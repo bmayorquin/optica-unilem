@@ -108,7 +108,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 Promoción(es) aplicada(s):
               </Heading>
 
-              {promotions.map((promotion) => {
+              {promotions.filter(Boolean).map((promotion) => {
                 return (
                   <div
                     key={promotion.id}
