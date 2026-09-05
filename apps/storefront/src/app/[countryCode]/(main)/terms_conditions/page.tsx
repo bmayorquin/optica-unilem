@@ -253,7 +253,7 @@ export default function TermsConditionsPage() {
         <div className="content-container py-10">
           <div className="flex flex-col gap-3 small:flex-row small:items-center small:justify-between">
             <span className="font-display text-2xl text-unilen-black">
-              UNILEN<span className="text-unilen-red">.</span>
+              UNILEN
             </span>
 
             <span className="text-[10px] uppercase tracking-[0.25em] text-unilen-ink/40">

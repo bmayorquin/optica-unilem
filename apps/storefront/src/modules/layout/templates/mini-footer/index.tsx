@@ -7,7 +7,7 @@ export default function MiniFooter() {
         <div className="flex flex-col small:flex-row items-center justify-between gap-4">
           <LocalizedClientLink href="/">
             <span className="font-display text-2xl tracking-tight">
-              UNILEN<span className="text-unilen-red">.</span>
+              UNILEN
             </span>
           </LocalizedClientLink>
 

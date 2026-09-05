@@ -32,7 +32,7 @@ export default async function PromoSection() {
         <div className="flex flex-col items-center text-center">
           <LocalizedClientLink href="/">
             <span className="font-display text-5xl small:text-6xl tracking-[-0.04em] text-unilen-black">
-              UNILEN<span className="text-unilen-red">.</span>
+              UNILEN
             </span>
           </LocalizedClientLink>
 

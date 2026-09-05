@@ -82,7 +82,7 @@ const SideMenu = ({
 
                   <div className="relative z-10 flex items-center justify-between">
                     <span className="font-display text-xl tracking-tight text-white">
-                      UNILEN<span className="text-unilen-red">.</span>
+                      UNILEN
                     </span>
 
                     <button
