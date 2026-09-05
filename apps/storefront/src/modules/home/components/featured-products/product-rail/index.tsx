@@ -21,7 +21,7 @@ export default async function ProductRail({
     },
   })
 
-  if (!pricedProducts) {
+  if (!pricedProducts || pricedProducts.length === 0) {
     return null
   }
 
@@ -57,7 +57,7 @@ export default async function ProductRail({
           Ver todo
         </InteractiveLink>
       </div>
-      <ul className="grid grid-cols-2 small:grid-cols-3 gap-x-6 gap-y-24 small:gap-y-36">
+      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-10 small:gap-y-16">
         {pricedProducts &&
           pricedProducts.map((product) => (
             <li key={product.id}>
