@@ -4,6 +4,7 @@ import { listCollections } from "@lib/data/collections"
 import { Text } from "@medusajs/ui"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import PromoImageCarousel from "@modules/layout/components/promo-image-carousel"
 
 const branchGroups = [
   {
@@ -123,7 +124,11 @@ const branchGroups = [
 export default async function Footer() {
   const regions = await listRegions()
   const honduras = regions?.find((r: any) => r.name === "Honduras")
-  const promoImageUrl = honduras?.metadata?.promo_image_url || "/promo/banner.jpg"
+  const promoImages = [
+    honduras?.metadata?.promo_image_url_1,
+    honduras?.metadata?.promo_image_url_2,
+    honduras?.metadata?.promo_image_url_3,
+  ].filter(Boolean) as string[]
   const promoVideoUrl = honduras?.metadata?.promo_video_url || "/promo/video.mp4"
   const { collections } = await listCollections({
     fields: "*products",
@@ -167,14 +172,8 @@ export default async function Footer() {
               </p>
             </div>
 
-            {/* RIGHT — IMAGE */}
-            <div className="group overflow-hidden aspect-square">
-              <img
-                src={promoImageUrl}
-                alt="Promoción Unilen"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
+            {/* RIGHT — IMAGE CAROUSEL */}
+            <PromoImageCarousel images={promoImages} />
 
           </div>
         </div>
