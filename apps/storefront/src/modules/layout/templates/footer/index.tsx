@@ -154,7 +154,7 @@ export default async function Footer() {
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-contain bg-black transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 
