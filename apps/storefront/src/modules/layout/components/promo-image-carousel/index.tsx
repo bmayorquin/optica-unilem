@@ -24,13 +24,13 @@ const PromoImageCarousel = ({ images }: PromoImageCarouselProps) => {
   }
 
   return (
-    <div className="group overflow-hidden aspect-square relative">
+    <div className="group overflow-hidden aspect-[3/4] relative bg-unilen-cream">
       {images.map((url, index) => (
         <img
           key={url}
           src={url}
           alt="Promoción Unilen"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />
