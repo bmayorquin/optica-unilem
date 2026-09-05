@@ -24,7 +24,7 @@ export default function AboutPage() {
             <span className="text-unilen-red">de mirar.</span>
           </h1>
 
-          <p className="mx-auto mt-10 max-w-xl text-sm small:text-base leading-relaxed text-unilen-ink/70">
+          <p className="mx-auto mt-10 max-w-xl text-base small:text-base leading-relaxed text-unilen-ink/70">
             Creemos que ver bien y sentirse bien pueden formar parte
             de la misma experiencia.
           </p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             <span className="text-unilen-red">de unos lentes.</span>
           </h2>
 
-          <div className="mx-auto mt-10 max-w-2xl space-y-6 text-sm small:text-base leading-relaxed text-unilen-ink/75">
+          <div className="mx-auto mt-10 max-w-2xl space-y-6 text-base small:text-base leading-relaxed text-unilen-ink/75">
             <p>
               En Unilen Óptica creemos que elegir unos lentes es una
               experiencia personal. Es encontrar ese diseño que se siente
@@ -91,7 +91,7 @@ export default function AboutPage() {
             <span className="text-unilen-red">habla de ti.</span>
           </h2>
 
-          <p className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-white/55">
+          <p className="mx-auto mt-10 max-w-xl text-base leading-relaxed text-white/55">
             Cada rostro es diferente. Cada estilo también.
             Nuestro objetivo es ayudarte a encontrar el lente
             que encaje contigo.
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 Estilo
               </h3>
 
-              <p className="mx-auto mt-5 max-w-xs text-sm leading-relaxed text-unilen-ink/60">
+              <p className="mx-auto mt-5 max-w-xs text-base leading-relaxed text-unilen-ink/60">
                 Diseños que reflejan tu personalidad y acompañan
                 tu forma de expresarte.
               </p>
@@ -149,7 +149,7 @@ export default function AboutPage() {
                 Visión
               </h3>
 
-              <p className="mx-auto mt-5 max-w-xs text-sm leading-relaxed text-unilen-ink/60">
+              <p className="mx-auto mt-5 max-w-xs text-base leading-relaxed text-unilen-ink/60">
                 Soluciones ópticas pensadas para que disfrutes
                 de una visión clara y cómoda.
               </p>
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 Cercanía
               </h3>
 
-              <p className="mx-auto mt-5 max-w-xs text-sm leading-relaxed text-unilen-ink/60">
+              <p className="mx-auto mt-5 max-w-xs text-base leading-relaxed text-unilen-ink/60">
                 Una presencia cada vez más cerca de ti en diferentes
                 ciudades de Honduras.
               </p>
@@ -195,7 +195,7 @@ export default function AboutPage() {
             <span className="text-unilen-red">de tu mirada.</span>
           </h2>
 
-          <p className="mx-auto mt-9 max-w-lg text-sm leading-relaxed text-unilen-ink/65">
+          <p className="mx-auto mt-9 max-w-lg text-base leading-relaxed text-unilen-ink/65">
             Nuestra presencia continúa creciendo para llevar nuestra
             experiencia a más lugares y acompañarte donde estés.
           </p>
@@ -222,7 +222,7 @@ export default function AboutPage() {
           </span>
         </h2>
 
-        <Text className="mx-auto mt-10 max-w-md text-sm leading-relaxed text-white/75">
+        <Text className="mx-auto mt-10 max-w-md text-base leading-relaxed text-white/75">
           Porque la mejor forma de mirar el mundo
           es hacerlo siendo tú mismo.
         </Text>

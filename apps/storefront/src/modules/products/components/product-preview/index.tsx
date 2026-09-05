@@ -39,7 +39,7 @@ export default async function ProductPreview({
           )}
 
           <Text
-            className="text-ui-fg-subtle text-sm uppercase"
+            className="text-ui-fg-subtle text-base uppercase"
             data-testid="product-title"
           >
             {product.title}

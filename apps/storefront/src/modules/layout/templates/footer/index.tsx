@@ -157,7 +157,7 @@ export default async function Footer() {
                     <li key={c.id}>
                       <LocalizedClientLink
                         href={`/categories/${c.handle}`}
-                        className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                        className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                         data-testid="category-link"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -187,7 +187,7 @@ export default async function Footer() {
                   <li key={c.id}>
                     <LocalizedClientLink
                       href={`/collections/${c.handle}`}
-                      className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                      className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -213,7 +213,7 @@ export default async function Footer() {
               <li>
                 <LocalizedClientLink
                   href="/about"
-                  className="text-sm text-unilen-ink/70 hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 hover:text-unilen-red"
                 >
                   Acerca de nosotros
                 </LocalizedClientLink>
@@ -222,7 +222,7 @@ export default async function Footer() {
               <li>
                 <LocalizedClientLink
                   href="/contact"
-                  className="text-sm text-unilen-ink/70 hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 hover:text-unilen-red"
                 >
                   Contacto
                 </LocalizedClientLink>
@@ -231,7 +231,7 @@ export default async function Footer() {
               <li>
                 <LocalizedClientLink
                   href="/faq"
-                  className="text-sm text-unilen-ink/70 hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 hover:text-unilen-red"
                 >
                   Preguntas frecuentes
                 </LocalizedClientLink>
@@ -240,7 +240,7 @@ export default async function Footer() {
               <li>
                 <LocalizedClientLink
                   href="/shipping"
-                  className="text-sm text-unilen-ink/70 hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 hover:text-unilen-red"
                 >
                   Envíos
                 </LocalizedClientLink>
@@ -249,7 +249,7 @@ export default async function Footer() {
               <li>
                 <LocalizedClientLink
                   href="/returns"
-                  className="text-sm text-unilen-ink/70 hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 hover:text-unilen-red"
                 >
                   Cambios y devoluciones
                 </LocalizedClientLink>
@@ -274,7 +274,7 @@ export default async function Footer() {
                   href="https://www.instagram.com/unilenoptica/?hl=es"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                 >
                   Instagram
                 </a>
@@ -285,7 +285,7 @@ export default async function Footer() {
                   href="https://www.facebook.com/UnilenOptica/?locale=es_LA"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                 >
                   Facebook
                 </a>
@@ -296,7 +296,7 @@ export default async function Footer() {
                   href="https://www.tiktok.com/@opticaunilen"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                 >
                   TikTok
                 </a>
@@ -307,7 +307,7 @@ export default async function Footer() {
                   href="https://wa.me/50487954789"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                  className="text-base text-unilen-ink/70 transition-colors hover:text-unilen-red"
                 >
                   WhatsApp
                 </a>
@@ -346,7 +346,7 @@ export default async function Footer() {
               <span className="text-unilen-red">tu Unilen</span>
             </h2>
 
-            <p className="mt-7 max-w-md text-sm leading-relaxed text-unilen-ink">
+            <p className="mt-7 max-w-md text-base leading-relaxed text-unilen-ink">
               Estamos más cerca de ti. Visita cualquiera de nuestras
               tiendas y descubre el lente perfecto para tu estilo.
             </p>
@@ -380,7 +380,7 @@ export default async function Footer() {
                       <div className="flex items-start justify-between gap-4">
 
                         <div>
-                          <h4 className="text-sm font-medium text-unilen-black transition-colors group-hover:text-unilen-red">
+                          <h4 className="text-base font-medium text-unilen-black transition-colors group-hover:text-unilen-red">
                             {branch.name}
                           </h4>
 

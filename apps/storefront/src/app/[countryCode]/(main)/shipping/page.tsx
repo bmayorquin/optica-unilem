@@ -46,7 +46,7 @@ export default function ShippingPage() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-10 max-w-lg text-sm leading-relaxed text-unilen-ink/60 small:text-base">
+          <p className="mx-auto mt-10 max-w-lg text-base leading-relaxed text-unilen-ink/60 small:text-base">
             Queremos que recibir tus lentes sea tan sencillo
             como elegirlos. Conoce cómo funcionan nuestros envíos.
           </p>
@@ -79,7 +79,7 @@ export default function ShippingPage() {
 
             </div>
 
-            <p className="max-w-md text-sm leading-relaxed text-unilen-ink/65 small:text-base">
+            <p className="max-w-md text-base leading-relaxed text-unilen-ink/65 small:text-base">
               Trabajamos para que cada pedido sea preparado con cuidado
               y llegue de forma segura hasta tu destino.
             </p>
@@ -121,7 +121,7 @@ export default function ShippingPage() {
 
                 </div>
 
-                <p className="mt-6 max-w-md text-sm leading-relaxed text-unilen-ink/60 transition-colors duration-300 group-hover:text-white/55">
+                <p className="mt-6 max-w-md text-base leading-relaxed text-unilen-ink/60 transition-colors duration-300 group-hover:text-white/55">
                   {item.text}
                 </p>
 
@@ -153,7 +153,7 @@ export default function ShippingPage() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-10 max-w-xl text-sm leading-relaxed text-white/55 small:text-base">
+          <p className="mx-auto mt-10 max-w-xl text-base leading-relaxed text-white/55 small:text-base">
             Los tiempos y condiciones de entrega pueden variar dependiendo
             del producto, disponibilidad y ubicación. La información
             correspondiente se indicará durante el proceso de compra.
@@ -183,7 +183,7 @@ export default function ShippingPage() {
               </span>
             </h2>
 
-            <p className="mx-auto mt-7 max-w-lg text-sm leading-relaxed text-unilen-ink/60">
+            <p className="mx-auto mt-7 max-w-lg text-base leading-relaxed text-unilen-ink/60">
               Nuestra presencia en diferentes ciudades de Honduras
               nos permite estar cerca de nuestros clientes.
             </p>
@@ -209,7 +209,7 @@ export default function ShippingPage() {
 
               <span
                 key={city}
-                className="text-sm text-unilen-ink/60 transition-colors duration-300 hover:text-unilen-red"
+                className="text-base text-unilen-ink/60 transition-colors duration-300 hover:text-unilen-red"
               >
                 {city}
               </span>
@@ -240,7 +240,7 @@ export default function ShippingPage() {
             </span>
           </h2>
 
-          <Text className="mx-auto mt-8 max-w-md text-sm leading-relaxed text-white/75">
+          <Text className="mx-auto mt-8 max-w-md text-base leading-relaxed text-white/75">
             Si tienes alguna pregunta sobre tu pedido o envío,
             estamos aquí para ayudarte.
           </Text>

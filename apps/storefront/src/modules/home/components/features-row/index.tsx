@@ -51,7 +51,7 @@ export default function FeaturesRow() {
             <div className="flex h-16 w-16 items-center justify-center rounded-full border border-unilen-red/30 text-unilen-red">
               {feature.icon}
             </div>
-            <h3 className="font-display text-sm uppercase tracking-wide text-unilen-black">
+            <h3 className="font-display text-base uppercase tracking-wide text-unilen-black">
               {feature.title}
             </h3>
             <p className="text-xs text-unilen-ink/70 max-w-[160px]">

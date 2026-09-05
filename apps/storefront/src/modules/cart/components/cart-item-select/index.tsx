@@ -35,7 +35,7 @@ const CartItemSelect = ({
       <Listbox value={value} onChange={onChange}>
         <ListboxButton
           data-testid={dataTestId}
-          className="flex items-center justify-between gap-x-2 h-10 w-16 px-3 border-2 border-unilen-red text-sm text-unilen-black hover:border-unilen-black transition-colors focus:outline-none"
+          className="flex items-center justify-between gap-x-2 h-10 w-16 px-3 border-2 border-unilen-red text-base text-unilen-black hover:border-unilen-black transition-colors focus:outline-none"
         >
           <span>{value}</span>
           <ChevronDown className="text-unilen-ink/60" />
@@ -49,7 +49,7 @@ const CartItemSelect = ({
         >
           <ListboxOptions
             static
-            className="absolute z-20 mt-1 max-h-48 w-16 overflow-y-auto bg-white border border-unilen-ink/10 shadow-md text-sm"
+            className="absolute z-20 mt-1 max-h-48 w-16 overflow-y-auto bg-white border border-unilen-ink/10 shadow-md text-base"
           >
             {options.map((n) => (
               <ListboxOption

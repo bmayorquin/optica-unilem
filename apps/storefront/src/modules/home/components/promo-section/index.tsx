@@ -36,7 +36,7 @@ export default async function PromoSection() {
             </span>
           </LocalizedClientLink>
 
-          <p className="mt-5 max-w-md text-sm leading-relaxed text-unilen-ink">
+          <p className="mt-5 max-w-md text-base leading-relaxed text-unilen-ink">
             Tu mirada, tu esencia. Lentes pensados para tu estilo,
             tu rostro y tu visión.
           </p>

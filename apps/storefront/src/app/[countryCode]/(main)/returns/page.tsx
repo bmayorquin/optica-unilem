@@ -17,7 +17,7 @@ export default function ReturnsPage() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-y-8 text-sm leading-relaxed text-unilen-ink">
+      <div className="flex flex-col gap-y-8 text-base leading-relaxed text-unilen-ink">
         <section>
           <h2 className="font-display text-xl text-unilen-black mb-2">
             Plazo para devoluciones

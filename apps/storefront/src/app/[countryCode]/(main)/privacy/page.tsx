@@ -20,7 +20,7 @@ export default function PrivacyPage() {
                 <span className="text-unilen-red">de privacidad.</span>
               </h1>
 
-              <p className="mt-8 max-w-xl text-sm leading-relaxed text-unilen-ink/70">
+              <p className="mt-8 max-w-xl text-base leading-relaxed text-unilen-ink/70">
                 En Óptica Unilen valoramos tu privacidad. Esta política
                 explica qué información podemos recopilar, cómo la utilizamos
                 y las medidas que aplicamos para protegerla.
@@ -119,13 +119,13 @@ export default function PrivacyPage() {
                 Información que recopilamos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Podemos recopilar información que proporcionas directamente
                 al crear una cuenta, realizar una compra, completar un
                 formulario o comunicarte con nosotros.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Esta información puede incluir tu nombre, dirección de
                 entrega, información de contacto y datos necesarios para
                 procesar tus pedidos.
@@ -144,13 +144,13 @@ export default function PrivacyPage() {
                 Uso de la información
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Utilizamos la información recopilada para gestionar pedidos,
                 procesar pagos, coordinar entregas, brindar atención al
                 cliente y mejorar nuestros productos y servicios.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 También podemos utilizarla para comunicarnos contigo en
                 relación con tus compras, solicitudes o actualizaciones
                 importantes del servicio.
@@ -169,13 +169,13 @@ export default function PrivacyPage() {
                 Protección de datos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Aplicamos medidas razonables de seguridad para proteger la
                 información personal frente a accesos no autorizados,
                 alteraciones, divulgación o destrucción.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Sin embargo, ningún sistema de transmisión o almacenamiento
                 electrónico puede garantizar una seguridad absoluta.
               </p>
@@ -193,14 +193,14 @@ export default function PrivacyPage() {
                 Cookies
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Nuestro sitio puede utilizar cookies y tecnologías similares
                 para mejorar la experiencia de navegación, recordar
                 determinadas preferencias y comprender cómo se utiliza el
                 sitio.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Puedes configurar tu navegador para aceptar, rechazar o
                 eliminar cookies según tus preferencias.
               </p>
@@ -218,13 +218,13 @@ export default function PrivacyPage() {
                 Servicios de terceros
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Para ofrecer determinados servicios, podemos trabajar con
                 proveedores externos que participan en procesos como pagos,
                 envíos, alojamiento, análisis o herramientas tecnológicas.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Estos proveedores únicamente deberían acceder a la información
                 necesaria para prestar los servicios correspondientes y están
                 sujetos a sus propias políticas y obligaciones.
@@ -243,13 +243,13 @@ export default function PrivacyPage() {
                 Tus derechos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Puedes solicitar información sobre los datos personales que
                 conservamos, así como solicitar su actualización o corrección
                 cuando corresponda.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Las solicitudes estarán sujetas a las obligaciones legales
                 aplicables y a los procedimientos de verificación necesarios
                 para proteger tu información.
@@ -268,7 +268,7 @@ export default function PrivacyPage() {
                 Contacto
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Si tienes preguntas sobre esta política de privacidad o sobre
                 el tratamiento de tus datos personales, puedes comunicarte
                 con Óptica Unilen a través de nuestros canales oficiales.
@@ -279,7 +279,7 @@ export default function PrivacyPage() {
                   Óptica Unilen
                 </span>
 
-                <p className="mt-3 text-sm text-unilen-black">
+                <p className="mt-3 text-base text-unilen-black">
                   Tu mirada, tu esencia.
                 </p>
 

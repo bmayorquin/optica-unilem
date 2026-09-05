@@ -34,7 +34,7 @@ export default function ContactPage() {
             Hablemos.
           </h1>
 
-          <p className="mx-auto mt-8 max-w-lg text-sm leading-relaxed text-unilen-ink/70 small:text-base">
+          <p className="mx-auto mt-8 max-w-lg text-base leading-relaxed text-unilen-ink/70 small:text-base">
             ¿Tienes alguna pregunta sobre nuestros lentes,
             pedidos o tiendas? Estamos aquí para ayudarte.
           </p>
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 para ayudarte.
               </h2>
 
-              <p className="mt-7 max-w-md text-sm leading-relaxed text-unilen-ink/65">
+              <p className="mt-7 max-w-md text-base leading-relaxed text-unilen-ink/65">
                 Escríbenos directamente por WhatsApp para resolver
                 tus dudas, consultar productos o recibir orientación.
               </p>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   →
                 </span>
 
-                <span className="text-sm font-medium text-unilen-black transition-colors group-hover:text-unilen-red">
+                <span className="text-base font-medium text-unilen-black transition-colors group-hover:text-unilen-red">
                   Escribir por WhatsApp
                 </span>
               </a>
@@ -114,7 +114,7 @@ export default function ContactPage() {
                   rel="noreferrer"
                   className="group flex items-center justify-between border-t border-unilen-ink/10 py-4"
                 >
-                  <span className="text-sm text-unilen-black">
+                  <span className="text-base text-unilen-black">
                     Instagram
                   </span>
 
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   rel="noreferrer"
                   className="group flex items-center justify-between border-t border-unilen-ink/10 py-4"
                 >
-                  <span className="text-sm text-unilen-black">
+                  <span className="text-base text-unilen-black">
                     Facebook
                   </span>
 
@@ -144,7 +144,7 @@ export default function ContactPage() {
                   rel="noreferrer"
                   className="group flex items-center justify-between border-t border-unilen-ink/10 py-4"
                 >
-                  <span className="text-sm text-unilen-black">
+                  <span className="text-base text-unilen-black">
                     TikTok
                   </span>
 
@@ -181,7 +181,7 @@ export default function ContactPage() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-lg text-sm leading-relaxed text-white/50">
+          <p className="mx-auto mt-8 max-w-lg text-base leading-relaxed text-white/50">
             Estamos disponibles para acompañarte en la elección
             de tus próximos lentes.
           </p>
@@ -225,7 +225,7 @@ export default function ContactPage() {
               </span>
             </h2>
 
-            <p className="mx-auto mt-7 max-w-xl text-sm leading-relaxed text-unilen-ink/65">
+            <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-unilen-ink/65">
               Encuentra una tienda Unilen en diferentes departamentos
               de Honduras.
             </p>
@@ -276,7 +276,7 @@ export default function ContactPage() {
           </span>
         </h2>
 
-        <Text className="mx-auto mt-8 max-w-sm text-sm leading-relaxed text-white/75">
+        <Text className="mx-auto mt-8 max-w-sm text-base leading-relaxed text-white/75">
           Estamos aquí para ayudarte a encontrar
           el lente perfecto para ti.
         </Text>

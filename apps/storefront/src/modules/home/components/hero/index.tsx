@@ -27,7 +27,7 @@ const Hero = () => {
             </Text>
 
             <LocalizedClientLink href="/store">
-              <Button className="bg-unilen-red hover:bg-unilen-red-dark border-none rounded-none px-9 py-4 text-sm uppercase tracking-widest">
+              <Button className="bg-unilen-red hover:bg-unilen-red-dark border-none rounded-none px-9 py-4 text-base uppercase tracking-widest">
                 Ver colección
               </Button>
             </LocalizedClientLink>

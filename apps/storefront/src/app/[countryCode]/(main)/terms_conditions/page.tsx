@@ -20,7 +20,7 @@ export default function TermsConditionsPage() {
                 <span className="text-unilen-red">y condiciones.</span>
               </h1>
 
-              <p className="mt-8 max-w-xl text-sm leading-relaxed text-unilen-ink/70">
+              <p className="mt-8 max-w-xl text-base leading-relaxed text-unilen-ink/70">
                 Queremos que tu experiencia en Óptica Unilen sea clara,
                 segura y transparente. Aquí encontrarás las condiciones
                 que aplican al utilizar nuestro sitio web y realizar
@@ -113,7 +113,7 @@ export default function TermsConditionsPage() {
                 Aceptación de los términos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Al acceder y utilizar este sitio web, realizar una compra
                 o utilizar cualquiera de nuestros servicios, aceptas
                 cumplir con estos términos y condiciones.
@@ -132,14 +132,14 @@ export default function TermsConditionsPage() {
                 Productos y precios
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Nos esforzamos por proporcionar información precisa sobre
                 nuestros productos, precios, características y disponibilidad.
                 Sin embargo, esta información puede actualizarse o modificarse
                 sin previo aviso.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Las imágenes utilizadas en el sitio tienen fines ilustrativos
                 y pueden presentar pequeñas diferencias respecto al producto
                 recibido.
@@ -158,12 +158,12 @@ export default function TermsConditionsPage() {
                 Pedidos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Al completar una compra, confirmas que la información
                 proporcionada es correcta y que deseas realizar el pedido.
               </p>
 
-              <p className="mt-4 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-4 text-base leading-7 text-unilen-ink/70">
                 Óptica Unilen se reserva el derecho de cancelar o rechazar
                 un pedido cuando exista un error evidente en el precio,
                 disponibilidad del producto o información proporcionada.
@@ -182,7 +182,7 @@ export default function TermsConditionsPage() {
                 Pagos
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Los pagos se procesan mediante los métodos disponibles
                 durante el proceso de compra. La confirmación del pedido
                 estará sujeta a la aprobación correspondiente del método
@@ -202,7 +202,7 @@ export default function TermsConditionsPage() {
                 Responsabilidad
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 El usuario se compromete a utilizar este sitio de manera
                 responsable y conforme a las leyes aplicables. No está
                 permitido utilizar el sitio para actividades fraudulentas,
@@ -222,7 +222,7 @@ export default function TermsConditionsPage() {
                 Contacto
               </h2>
 
-              <p className="mt-5 text-sm leading-7 text-unilen-ink/70">
+              <p className="mt-5 text-base leading-7 text-unilen-ink/70">
                 Si tienes preguntas sobre estos términos y condiciones,
                 puedes comunicarte con Óptica Unilen a través de nuestros
                 canales oficiales de atención.
@@ -233,7 +233,7 @@ export default function TermsConditionsPage() {
                   Óptica Unilen
                 </span>
 
-                <p className="mt-3 text-sm text-unilen-black">
+                <p className="mt-3 text-base text-unilen-black">
                   Tu mirada, tu esencia.
                 </p>
 

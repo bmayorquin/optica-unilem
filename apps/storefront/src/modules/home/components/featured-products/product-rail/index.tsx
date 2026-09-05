@@ -45,7 +45,7 @@ export default async function ProductRail({
             {collection.title}
           </h2>
           {minPrice !== null && maxPrice !== null && currencyCode && (
-            <p className="mt-2 text-sm text-ui-fg-subtle">
+            <p className="mt-2 text-base text-ui-fg-subtle">
               Lentes desde{" "}
               {convertToLocale({ amount: minPrice, currency_code: currencyCode })}
               {" "}hasta{" "}

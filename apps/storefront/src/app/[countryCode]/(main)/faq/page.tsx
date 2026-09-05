@@ -129,7 +129,7 @@ export default function FAQPage() {
             </span>
           </h1>
 
-          <p className="mx-auto mt-10 max-w-lg text-sm leading-relaxed text-unilen-ink/60 small:text-base">
+          <p className="mx-auto mt-10 max-w-lg text-base leading-relaxed text-unilen-ink/60 small:text-base">
             Información clara sobre tus pedidos, pagos,
             productos y cambios.
           </p>
@@ -182,7 +182,7 @@ export default function FAQPage() {
 
                   </div>
 
-                  <p className="mt-3 text-xs text-unilen-ink/50 small:text-sm">
+                  <p className="mt-3 text-xs text-unilen-ink/50 small:text-base">
                     {section.subtitle}
                   </p>
 
@@ -212,7 +212,7 @@ export default function FAQPage() {
                         >
 
                           <span
-                            className={`text-sm leading-relaxed transition-colors duration-300 small:text-base ${
+                            className={`text-base leading-relaxed transition-colors duration-300 small:text-base ${
                               isOpen
                                 ? "text-unilen-red"
                                 : "text-unilen-black group-hover:text-unilen-red"
@@ -245,7 +245,7 @@ export default function FAQPage() {
 
                           <div className="overflow-hidden">
 
-                            <p className="max-w-lg pb-6 pr-10 text-sm leading-relaxed text-unilen-ink/60">
+                            <p className="max-w-lg pb-6 pr-10 text-base leading-relaxed text-unilen-ink/60">
                               {item.answer}
                             </p>
 
@@ -287,7 +287,7 @@ export default function FAQPage() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-lg text-sm leading-relaxed text-white/50">
+          <p className="mx-auto mt-8 max-w-lg text-base leading-relaxed text-white/50">
             Si no encontraste la respuesta que buscabas,
             puedes comunicarte directamente con nosotros.
           </p>
@@ -333,7 +333,7 @@ export default function FAQPage() {
             </span>
           </h2>
 
-          <p className="mx-auto mt-10 max-w-sm text-sm leading-relaxed text-white/75">
+          <p className="mx-auto mt-10 max-w-sm text-base leading-relaxed text-white/75">
             Tu mirada, tu esencia.
           </p>
 
