@@ -1,3 +1,4 @@
+import { listRegions } from "@lib/data/regions"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
 import { Text } from "@medusajs/ui"
@@ -120,6 +121,10 @@ const branchGroups = [
 ]
 
 export default async function Footer() {
+  const regions = await listRegions()
+  const honduras = regions?.find((r: any) => r.name === "Honduras")
+  const promoImageUrl = honduras?.metadata?.promo_image_url || "/promo/banner.jpg"
+  const promoVideoUrl = honduras?.metadata?.promo_video_url || "/promo/video.mp4"
   const { collections } = await listCollections({
     fields: "*products",
   })
@@ -156,7 +161,7 @@ export default async function Footer() {
               {/* IMAGE */}
               <div className="group overflow-hidden aspect-[4/5]">
                 <img
-                  src="/promo/banner.jpg"
+                  src={promoImageUrl}
                   alt="Promoción Unilen"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -165,7 +170,7 @@ export default async function Footer() {
               {/* VIDEO */}
               <div className="group overflow-hidden aspect-[4/5]">
                 <video
-                  src="/promo/video.mp4"
+                  src={promoVideoUrl}
                   autoPlay
                   muted
                   loop
