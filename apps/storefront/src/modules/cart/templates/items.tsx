@@ -19,7 +19,7 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
       <Table>
         <Table.Header className="border-t-0 border-b-2 border-unilen-red">
           <Table.Row className="text-unilen-black text-xs uppercase tracking-widest">
-            <Table.HeaderCell className="!pl-0">Producto</Table.HeaderCell>
+            <Table.HeaderCell className="pl-0">Producto</Table.HeaderCell>
             <Table.HeaderCell></Table.HeaderCell>
             <Table.HeaderCell>Cantidad</Table.HeaderCell>
             <Table.HeaderCell className="hidden small:table-cell">
