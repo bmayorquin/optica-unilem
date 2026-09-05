@@ -24,25 +24,25 @@ const PromoImageCarousel = ({ images }: PromoImageCarouselProps) => {
   }
 
   return (
-    <div className="group overflow-hidden aspect-[3/4] relative bg-unilen-cream">
+    <div className="group overflow-hidden aspect-[21/9] w-full relative">
       {images.map((url, index) => (
         <img
           key={url}
           src={url}
           alt="Promoción Unilen"
-          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />
       ))}
 
       {images.length > 1 && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-x-2">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-x-2">
           {images.map((_, index) => (
             <span
               key={index}
-              className={`h-1.5 w-1.5 rounded-full transition-colors ${
-                index === currentIndex ? "bg-white" : "bg-white/40"
+              className={`h-2 w-2 rounded-full transition-colors ${
+                index === currentIndex ? "bg-white" : "bg-white/50"
               }`}
             />
           ))}

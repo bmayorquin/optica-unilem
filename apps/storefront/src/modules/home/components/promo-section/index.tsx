@@ -42,7 +42,7 @@ export default async function PromoSection() {
           </p>
         </div>
 
-        <div className="w-full max-w-md">
+        <div className="w-full">
           <PromoImageCarousel images={promoImages} />
         </div>
       </div>
