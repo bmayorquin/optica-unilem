@@ -19,6 +19,17 @@ export default async function ProductPreview({
     product,
   })
 
+  const totalStock = (product.variants || []).reduce((sum: number, v: any) => {
+    if (!v.manage_inventory) {
+      return sum
+    }
+    return sum + (v.inventory_quantity || 0)
+  }, 0)
+
+  const anyManagesInventory = (product.variants || []).some(
+    (v: any) => v.manage_inventory
+  )
+
   return (
     <LocalizedClientLink href={`/products/${product.handle}`} className="group" target="_blank" rel="noopener noreferrer">
       <div data-testid="product-wrapper">
@@ -37,17 +48,25 @@ export default async function ProductPreview({
               {product.type.value}
             </Text>
           )}
-
           <Text
             className="text-ui-fg-subtle text-base uppercase"
             data-testid="product-title"
           >
             {product.title}
           </Text>
-
           <div className="mt-1">
             {cheapestPrice && <PreviewPrice price={cheapestPrice} />}
           </div>
+          {anyManagesInventory && (
+            <Text
+              className="text-xs text-unilen-ink/60 mt-1"
+              data-testid="product-stock"
+            >
+              {totalStock > 0
+                ? `${totalStock} disponible${totalStock === 1 ? "" : "s"}`
+                : "Sin existencias"}
+            </Text>
+          )}
         </div>
       </div>
     </LocalizedClientLink>
