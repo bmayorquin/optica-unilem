@@ -343,7 +343,7 @@ export default async function Footer() {
             <h2 className="mt-6 max-w-3xl font-display text-5xl small:text-7xl leading-[0.9] tracking-[-0.04em] text-unilen-black">
               Encuentra
               <br />
-              <span className="text-unilen-red">tu Unilen.</span>
+              <span className="text-unilen-red">tu Unilen</span>
             </h2>
 
             <p className="mt-7 max-w-md text-sm leading-relaxed text-unilen-ink">
