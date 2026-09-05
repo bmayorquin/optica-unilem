@@ -29,7 +29,7 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
   const currentImage = images[currentIndex]
 
   return (
-    <div className="flex flex-col gap-y-4 max-w-[500px] mx-auto small:mx-16">
+    <div className="flex flex-col gap-y-4 max-w-[350px] mx-auto small:mx-16">
       <Container className="relative aspect-square w-full overflow-hidden bg-ui-bg-subtle">
         {!!currentImage.url && (
           <Image
