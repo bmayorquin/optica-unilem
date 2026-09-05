@@ -11,8 +11,12 @@ type ImageGalleryProps = {
   }[]
 }
 
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+const ImageGallery = ({ images: rawImages }: ImageGalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+
+  const images = [...(rawImages || [])].sort((a: any, b: any) => {
+    return (a.rank ?? 0) - (b.rank ?? 0)
+  })
 
   if (!images || images.length === 0) {
     return null
