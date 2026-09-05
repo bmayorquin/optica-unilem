@@ -24,7 +24,7 @@ const PromoImageCarousel = ({ images }: PromoImageCarouselProps) => {
   }
 
   return (
-    <div className="group overflow-hidden aspect-[21/9] w-full relative">
+    <div className="group overflow-hidden aspect-video w-full relative">
       {images.map((url, index) => (
         <img
           key={url}
