@@ -1,73 +1,70 @@
 "use client"
 
-import { IconBadge, clx } from "@medusajs/ui"
+import { Fragment } from "react"
 import {
-  SelectHTMLAttributes,
-  forwardRef,
-  useEffect,
-  useImperativeHandle,
-  useRef,
-  useState,
-} from "react"
-
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+  Transition,
+} from "@headlessui/react"
 import ChevronDown from "@modules/common/icons/chevron-down"
 
-type NativeSelectProps = {
-  placeholder?: string
-  errors?: Record<string, unknown>
-  touched?: Record<string, unknown>
-} & Omit<SelectHTMLAttributes<HTMLSelectElement>, "size">
+type CartItemSelectProps = {
+  value: number
+  onChange: (value: number) => void
+  maxQuantity: number
+  className?: string
+  "data-testid"?: string
+}
 
-const CartItemSelect = forwardRef<HTMLSelectElement, NativeSelectProps>(
-  ({ placeholder = "Select...", className, children, ...props }, ref) => {
-    const innerRef = useRef<HTMLSelectElement>(null)
-    const [isPlaceholder, setIsPlaceholder] = useState(false)
+const CartItemSelect = ({
+  value,
+  onChange,
+  maxQuantity,
+  className,
+  "data-testid": dataTestId,
+}: CartItemSelectProps) => {
+  const options = Array.from(
+    { length: Math.max(maxQuantity, 1) },
+    (_, i) => i + 1
+  )
 
-    useImperativeHandle<HTMLSelectElement | null, HTMLSelectElement | null>(
-      ref,
-      () => innerRef.current
-    )
-
-    useEffect(() => {
-      if (innerRef.current && innerRef.current.value === "") {
-        setIsPlaceholder(true)
-      } else {
-        setIsPlaceholder(false)
-      }
-    }, [innerRef.current?.value])
-
-    return (
-      <div>
-        <IconBadge
-          onFocus={() => innerRef.current?.focus()}
-          onBlur={() => innerRef.current?.blur()}
-          className={clx(
-            "relative flex items-center txt-compact-small border text-ui-fg-base group",
-            className,
-            {
-              "text-ui-fg-subtle": isPlaceholder,
-            }
-          )}
+  return (
+    <div className={`relative ${className ?? ""}`}>
+      <Listbox value={value} onChange={onChange}>
+        <ListboxButton
+          data-testid={dataTestId}
+          className="flex items-center justify-between gap-x-2 h-10 w-16 px-3 border border-unilen-ink/20 text-sm text-unilen-black hover:border-unilen-black transition-colors focus:outline-none"
         >
-          <select
-            ref={innerRef}
-            {...props}
-            className="appearance-none bg-transparent border-none px-4 transition-colors duration-150 focus:border-gray-700 outline-none w-16 h-16 items-center justify-center"
-          >
-            <option disabled value="">
-              {placeholder}
-            </option>
-            {children}
-          </select>
-          <span className="absolute flex pointer-events-none justify-end w-8 group-hover:animate-pulse">
-            <ChevronDown />
-          </span>
-        </IconBadge>
-      </div>
-    )
-  }
-)
+          <span>{value}</span>
+          <ChevronDown className="text-unilen-ink/60" />
+        </ListboxButton>
 
-CartItemSelect.displayName = "CartItemSelect"
+        <Transition
+          as={Fragment}
+          leave="transition ease-in duration-100"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <ListboxOptions
+            static
+            className="absolute z-20 mt-1 max-h-48 w-16 overflow-y-auto bg-white border border-unilen-ink/10 shadow-md text-sm"
+          >
+            {options.map((n) => (
+              <ListboxOption
+                key={n}
+                value={n}
+                className="px-3 py-2 cursor-pointer text-center text-unilen-black hover:bg-unilen-red hover:text-white transition-colors"
+              >
+                {n}
+              </ListboxOption>
+            ))}
+          </ListboxOptions>
+        </Transition>
+      </Listbox>
+    </div>
+  )
+}
 
 export default CartItemSelect
