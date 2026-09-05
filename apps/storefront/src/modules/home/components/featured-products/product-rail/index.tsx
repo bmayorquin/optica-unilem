@@ -1,7 +1,6 @@
 import { listProducts } from "@lib/data/products"
+import { convertToLocale } from "@lib/util/money"
 import { HttpTypes } from "@medusajs/types"
-import { Text } from "@medusajs/ui"
-
 import InteractiveLink from "@modules/common/components/interactive-link"
 import ProductPreview from "@modules/products/components/product-preview"
 
@@ -26,10 +25,34 @@ export default async function ProductRail({
     return null
   }
 
+  const allPrices = pricedProducts
+    .flatMap((p: any) =>
+      (p.variants || [])
+        .filter((v: any) => !!v.calculated_price)
+        .map((v: any) => v.calculated_price.calculated_amount)
+    )
+    .filter((amount: number) => typeof amount === "number")
+
+  const minPrice = allPrices.length ? Math.min(...allPrices) : null
+  const maxPrice = allPrices.length ? Math.max(...allPrices) : null
+  const currencyCode = pricedProducts[0]?.variants?.[0]?.calculated_price?.currency_code
+
   return (
     <div className="content-container py-12 small:py-24">
-      <div className="flex justify-between mb-8">
-        <h2 className="font-display text-3xl small:text-4xl text-unilen-black">{collection.title}</h2>
+      <div className="flex justify-between items-end mb-8">
+        <div>
+          <h2 className="font-display text-3xl small:text-4xl text-unilen-black">
+            {collection.title}
+          </h2>
+          {minPrice !== null && maxPrice !== null && currencyCode && (
+            <p className="mt-2 text-sm text-ui-fg-subtle">
+              Lentes desde{" "}
+              {convertToLocale({ amount: minPrice, currency_code: currencyCode })}
+              {" "}hasta{" "}
+              {convertToLocale({ amount: maxPrice, currency_code: currencyCode })}
+            </p>
+          )}
+        </div>
         <InteractiveLink href={`/collections/${collection.handle}`}>
           Ver todo
         </InteractiveLink>
