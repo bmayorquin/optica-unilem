@@ -118,6 +118,7 @@ const branchGroups = [
     ],
   },
 ]
+export default async function Footer() {
 
   const { collections } = await listCollections({
     fields: "*products",
