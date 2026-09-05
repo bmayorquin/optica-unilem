@@ -50,7 +50,7 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
           </div>
           <div>
             <span className="font-semibold">País de origen</span>
-            <p>{product.origin_country ? product.origin_country : "-"}</p>
+            <p>{product.origin_country ? product.origin_country.toUpperCase() : "-"}</p>
           </div>
           <div>
             <span className="font-semibold">Tipo</span>
