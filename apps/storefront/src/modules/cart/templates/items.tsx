@@ -14,11 +14,11 @@ const ItemsTemplate = ({ cart }: ItemsTemplateProps) => {
   return (
     <div>
       <div className="pb-3 flex items-center">
-        <Heading className="text-[2rem] leading-[2.75rem]">Carrito</Heading>
+        <Heading className="font-display text-3xl text-unilen-black">Carrito</Heading>
       </div>
       <Table>
-        <Table.Header className="border-t-0">
-          <Table.Row className="text-ui-fg-subtle txt-medium-plus">
+        <Table.Header className="border-t-0 border-b-2 border-unilen-red">
+          <Table.Row className="text-unilen-black text-xs uppercase tracking-widest">
             <Table.HeaderCell className="!pl-0">Producto</Table.HeaderCell>
             <Table.HeaderCell></Table.HeaderCell>
             <Table.HeaderCell>Cantidad</Table.HeaderCell>
