@@ -139,7 +139,7 @@ export default async function Footer() {
             BRAND + PROMO
         ====================================================== */}
         <div className="border-b border-unilen-ink/10 py-16 small:py-24">
-          <div className="grid grid-cols-1 medium:grid-cols-[1.6fr_1fr_1.6fr] gap-10 medium:gap-8 items-center">
+          <div className="grid grid-cols-1 medium:grid-cols-[2.2fr_0.7fr_1.8fr] gap-6 medium:gap-6 items-center">
 
             {/* LEFT — VIDEO */}
             <div className="group overflow-hidden aspect-square">
