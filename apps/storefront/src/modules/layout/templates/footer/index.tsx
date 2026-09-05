@@ -1,10 +1,8 @@
-import { listRegions } from "@lib/data/regions"
 import { listCategories } from "@lib/data/categories"
 import { listCollections } from "@lib/data/collections"
 import { Text } from "@medusajs/ui"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
-import PromoImageCarousel from "@modules/layout/components/promo-image-carousel"
 
 const branchGroups = [
   {
@@ -121,15 +119,6 @@ const branchGroups = [
   },
 ]
 
-export default async function Footer() {
-  const regions = await listRegions()
-  const honduras = regions?.find((r: any) => r.name === "Honduras")
-  const promoImages = [
-    honduras?.metadata?.promo_image_url_1,
-    honduras?.metadata?.promo_image_url_2,
-    honduras?.metadata?.promo_image_url_3,
-  ].filter(Boolean) as string[]
-  const promoVideoUrl = honduras?.metadata?.promo_video_url || "/promo/video.mp4"
   const { collections } = await listCollections({
     fields: "*products",
   })
@@ -139,44 +128,6 @@ export default async function Footer() {
   return (
     <footer className="w-full bg-unilen-cream text-unilen-ink">
       <div className="content-container">
-
-        {/* =====================================================
-            BRAND + PROMO
-        ====================================================== */}
-        <div className="border-b border-unilen-ink/10 py-16 small:py-24">
-          <div className="grid grid-cols-1 medium:grid-cols-[2.6fr_0.6fr_1.8fr] gap-10 medium:gap-14 items-center">
-
-            {/* LEFT — VIDEO */}
-            <div className="group overflow-hidden aspect-video">
-              <video
-                src={promoVideoUrl}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-contain bg-black transition-transform duration-700 group-hover:scale-105"
-              />
-            </div>
-
-            {/* CENTER — BRAND */}
-            <div className="flex flex-col items-center text-center">
-              <LocalizedClientLink href="/">
-                <span className="font-display text-5xl small:text-6xl tracking-[-0.04em] text-unilen-black">
-                  UNILEN<span className="text-unilen-red">.</span>
-                </span>
-              </LocalizedClientLink>
-
-              <p className="mt-5 max-w-xs text-sm leading-relaxed text-unilen-ink">
-                Tu mirada, tu esencia. Lentes pensados para tu estilo,
-                tu rostro y tu visión.
-              </p>
-            </div>
-
-            {/* RIGHT — IMAGE CAROUSEL */}
-            <PromoImageCarousel images={promoImages} />
-
-          </div>
-        </div>
 
         {/* =====================================================
             MAIN FOOTER
