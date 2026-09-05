@@ -30,7 +30,7 @@ const PromoImageCarousel = ({ images }: PromoImageCarouselProps) => {
           key={url}
           src={url}
           alt="Promoción Unilen"
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-1000 ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />
