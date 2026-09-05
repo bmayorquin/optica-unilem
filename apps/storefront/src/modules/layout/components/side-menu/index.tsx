@@ -107,6 +107,8 @@ const SideMenu = ({
                               href={href}
                               onClick={close}
                               data-testid={`${name.toLowerCase()}-link`}
+                              target={href !== "/cart" ? "_blank" : undefined}
+                              rel={href !== "/cart" ? "noopener noreferrer" : undefined}
                               className="flex items-center gap-5 border-b border-white/[0.08] py-5 transition-all duration-300 hover:pl-3"
                             >
                               <span className="text-[9px] tracking-widest text-unilen-red">

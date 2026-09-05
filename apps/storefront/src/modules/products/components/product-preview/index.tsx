@@ -20,7 +20,7 @@ export default async function ProductPreview({
   })
 
   return (
-    <LocalizedClientLink href={`/products/${product.handle}`} className="group">
+    <LocalizedClientLink href={`/products/${product.handle}`} className="group" target="_blank" rel="noopener noreferrer">
       <div data-testid="product-wrapper">
         <Thumbnail
           thumbnail={product.thumbnail}

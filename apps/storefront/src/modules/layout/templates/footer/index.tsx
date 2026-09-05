@@ -208,6 +208,8 @@ export default async function Footer() {
                         href={`/categories/${c.handle}`}
                         className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
                         data-testid="category-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         {c.name}
                       </LocalizedClientLink>
@@ -235,6 +237,8 @@ export default async function Footer() {
                     <LocalizedClientLink
                       href={`/collections/${c.handle}`}
                       className="text-sm text-unilen-ink/70 transition-colors hover:text-unilen-red"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       {c.title}
                     </LocalizedClientLink>
