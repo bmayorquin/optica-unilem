@@ -139,10 +139,22 @@ export default async function Footer() {
             BRAND + PROMO
         ====================================================== */}
         <div className="border-b border-unilen-ink/10 py-16 small:py-24">
-          <div className="grid grid-cols-1 medium:grid-cols-[0.8fr_1.2fr] gap-10 medium:gap-20 items-center">
+          <div className="grid grid-cols-1 medium:grid-cols-[1.1fr_0.9fr] gap-10 medium:gap-16 items-center">
 
-            {/* LEFT — BRAND */}
-            <div>
+            {/* LEFT — VIDEO */}
+            <div className="group overflow-hidden aspect-video medium:aspect-[4/3]">
+              <video
+                src={promoVideoUrl}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
+
+            {/* RIGHT — BRAND */}
+            <div className="flex flex-col items-center medium:items-start text-center medium:text-left">
               <LocalizedClientLink href="/">
                 <span className="font-display text-5xl small:text-7xl tracking-[-0.04em] text-unilen-black">
                   UNILEN<span className="text-unilen-red">.</span>
@@ -153,32 +165,6 @@ export default async function Footer() {
                 Tu mirada, tu esencia. Lentes pensados para tu estilo,
                 tu rostro y tu visión.
               </p>
-            </div>
-
-            {/* RIGHT — IMAGE + VIDEO */}
-            <div className="grid grid-cols-2 gap-4">
-
-              {/* IMAGE */}
-              <div className="group overflow-hidden aspect-[4/5]">
-                <img
-                  src={promoImageUrl}
-                  alt="Promoción Unilen"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
-              {/* VIDEO */}
-              <div className="group overflow-hidden aspect-[4/5]">
-                <video
-                  src={promoVideoUrl}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-
             </div>
 
           </div>
