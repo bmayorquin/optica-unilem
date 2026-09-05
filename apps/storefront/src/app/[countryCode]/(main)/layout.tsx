@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-
 import { listCartOptions, retrieveCart } from "@lib/data/cart"
 import { retrieveCustomer } from "@lib/data/customer"
 import { getBaseURL } from "@lib/util/env"
@@ -16,21 +15,19 @@ export const metadata: Metadata = {
 export default async function PageLayout(props: { children: React.ReactNode }) {
   const customer = await retrieveCustomer()
   const cart = await retrieveCart()
-  let shippingOptions: StoreCartShippingOption[] = []
 
+  let shippingOptions: StoreCartShippingOption[] = []
   if (cart) {
     const { shipping_options } = await listCartOptions()
-
     shippingOptions = shipping_options
   }
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Nav />
       {customer && cart && (
         <CartMismatchBanner customer={customer} cart={cart} />
       )}
-
       {cart && (
         <FreeShippingPriceNudge
           variant="popup"
@@ -38,8 +35,8 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
           shippingOptions={shippingOptions}
         />
       )}
-      {props.children}
+      <div className="flex-1">{props.children}</div>
       <MiniFooter />
-    </>
+    </div>
   )
 }
