@@ -14,7 +14,7 @@ export default async function PromoSection() {
 
   return (
     <div className="pt-4 pb-16 small:pt-6 small:pb-24">
-      <div className="max-w-[1800px] w-full mx-auto px-6">
+      <div className="max-w-[1750px] w-full mx-auto px-6">
         <PromoImageCarousel images={promoImages} />
       </div>
 
