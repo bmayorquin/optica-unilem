@@ -6,26 +6,19 @@ export default async function PromoSection() {
   const regions = await listRegions()
   const honduras = regions?.find((r: any) => r.name === "Honduras")
 
-  const promoBannerUrl = honduras?.metadata?.promo_banner_url as string | undefined
-
   const promoImages = [
     honduras?.metadata?.promo_image_url_1,
     honduras?.metadata?.promo_image_url_2,
     honduras?.metadata?.promo_image_url_3,
+    honduras?.metadata?.promo_image_url_4,
   ].filter(Boolean) as string[]
 
   return (
     <div className="content-container pt-4 pb-16 small:pt-6 small:pb-24">
       <div className="flex flex-col items-center gap-y-10 max-w-4xl mx-auto">
-        {promoBannerUrl && (
-          <div className="group overflow-hidden w-full">
-            <img
-              src={promoBannerUrl}
-              alt="Promoción Unilen"
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        )}
+        <div className="w-full">
+          <PromoImageCarousel images={promoImages} />
+        </div>
 
         <div className="flex flex-col items-center text-center">
           <LocalizedClientLink href="/">
@@ -38,10 +31,6 @@ export default async function PromoSection() {
             Tu mirada, tu esencia. Lentes pensados para tu estilo,
             tu rostro y tu visión.
           </p>
-        </div>
-
-        <div className="w-full">
-          <PromoImageCarousel images={promoImages} />
         </div>
       </div>
     </div>
