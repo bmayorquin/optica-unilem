@@ -13,22 +13,24 @@ export default async function PromoSection() {
     : []
 
   return (
-    <div className="content-container pt-4 pb-16 small:pt-6 small:pb-24">
-      <div className="w-full">
+    <div className="pt-4 pb-16 small:pt-6 small:pb-24">
+      <div className="max-w-[1800px] w-full mx-auto px-6">
         <PromoImageCarousel images={promoImages} />
       </div>
 
-      <div className="flex flex-col items-center text-center mt-10">
-        <LocalizedClientLink href="/">
-          <span className="font-display text-5xl small:text-6xl tracking-[-0.04em] text-unilen-black">
-            UNILEN
-          </span>
-        </LocalizedClientLink>
+      <div className="content-container">
+        <div className="flex flex-col items-center text-center mt-10">
+          <LocalizedClientLink href="/">
+            <span className="font-display text-5xl small:text-6xl tracking-[-0.04em] text-unilen-black">
+              UNILEN
+            </span>
+          </LocalizedClientLink>
 
-        <p className="mt-5 max-w-md text-base leading-relaxed text-unilen-ink">
-          Tu mirada, tu esencia. Lentes pensados para tu estilo,
-          tu rostro y tu visión.
-        </p>
+          <p className="mt-5 max-w-md text-base leading-relaxed text-unilen-ink">
+            Tu mirada, tu esencia. Lentes pensados para tu estilo,
+            tu rostro y tu visión.
+          </p>
+        </div>
       </div>
     </div>
   )
