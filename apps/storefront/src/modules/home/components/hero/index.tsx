@@ -4,7 +4,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 const Hero = () => {
   return (
     <div className="w-full bg-unilen-black relative overflow-hidden">
-      <div className="content-container min-h-[42vh] flex items-center py-8 small:py-10">
+      <div className="content-container min-h-[35vh] flex items-center py-6 small:py-8">
         <div className="grid grid-cols-1 small:grid-cols-2 gap-12 small:gap-20 items-center w-full">
 
           {/* Typography */}
