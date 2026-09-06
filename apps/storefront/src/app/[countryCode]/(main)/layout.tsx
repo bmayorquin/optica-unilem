@@ -6,6 +6,7 @@ import { StoreCartShippingOption } from "@medusajs/types"
 import CartMismatchBanner from "@modules/layout/components/cart-mismatch-banner"
 import MiniFooter from "@modules/layout/templates/mini-footer"
 import Nav from "@modules/layout/templates/nav"
+import WhatsAppButton from "@modules/layout/components/whatsapp-button"
 import FreeShippingPriceNudge from "@modules/shipping/components/free-shipping-price-nudge"
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
       )}
       <div className="flex-1">{props.children}</div>
       <MiniFooter />
+      <WhatsAppButton />
     </div>
   )
 }
