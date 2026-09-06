@@ -6,8 +6,7 @@ export default async function PromoSection() {
   const regions = await listRegions()
   const honduras = regions?.find((r: any) => r.name === "Honduras")
 
-  const promoVideoUrl =
-    honduras?.metadata?.promo_video_url || "/promo/video.mp4"
+  const promoBannerUrl = honduras?.metadata?.promo_banner_url as string | undefined
 
   const promoImages = [
     honduras?.metadata?.promo_image_url_1,
@@ -18,16 +17,15 @@ export default async function PromoSection() {
   return (
     <div className="content-container pt-4 pb-16 small:pt-6 small:pb-24">
       <div className="flex flex-col items-center gap-y-10 max-w-4xl mx-auto">
-        <div className="group overflow-hidden aspect-video w-full bg-black">
-          <video
-            src={promoVideoUrl}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-full object-contain"
-          />
-        </div>
+        {promoBannerUrl && (
+          <div className="group overflow-hidden w-full">
+            <img
+              src={promoBannerUrl}
+              alt="Promoción Unilen"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
 
         <div className="flex flex-col items-center text-center">
           <LocalizedClientLink href="/">
