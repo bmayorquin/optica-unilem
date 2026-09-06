@@ -10,7 +10,7 @@ const Hero = () => {
           {/* Typography */}
           <div className="order-1 flex flex-col gap-7 small:items-start items-center text-center small:text-left z-10">
             <span className="text-unilen-red text-xs tracking-[0.35em] uppercase font-medium">
-              Óptica Unilem
+              Unilen Optica
             </span>
 
             <Heading
@@ -19,7 +19,7 @@ const Hero = () => {
             >
               Una nueva
               <br />
-              <span className="text-unilen-red">forma de mirar.</span>
+              <span className="text-unilen-red">forma de mirar</span>
             </Heading>
 
             <Text className="text-white/60 text-base small:text-lg max-w-md leading-relaxed">
