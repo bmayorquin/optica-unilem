@@ -14,13 +14,13 @@ export default async function PromoSection() {
   ].filter(Boolean) as string[]
 
   return (
-    <div className="content-container pt-4 pb-16 small:pt-6 small:pb-24">
-      <div className="flex flex-col items-center gap-y-10 max-w-4xl mx-auto">
-        <div className="w-full">
-          <PromoImageCarousel images={promoImages} />
-        </div>
+    <div className="pt-4 pb-16 small:pt-6 small:pb-24">
+      <div className="w-full">
+        <PromoImageCarousel images={promoImages} />
+      </div>
 
-        <div className="flex flex-col items-center text-center">
+      <div className="content-container">
+        <div className="flex flex-col items-center text-center mt-10">
           <LocalizedClientLink href="/">
             <span className="font-display text-5xl small:text-6xl tracking-[-0.04em] text-unilen-black">
               UNILEN
