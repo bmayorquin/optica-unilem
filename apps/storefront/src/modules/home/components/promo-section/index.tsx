@@ -11,6 +11,7 @@ export default async function PromoSection() {
     honduras?.metadata?.promo_image_url_2,
     honduras?.metadata?.promo_image_url_3,
     honduras?.metadata?.promo_image_url_4,
+    honduras?.metadata?.promo_image_url_5,
   ].filter(Boolean) as string[]
 
   return (
