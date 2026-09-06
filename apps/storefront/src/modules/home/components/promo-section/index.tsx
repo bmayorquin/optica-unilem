@@ -6,13 +6,11 @@ export default async function PromoSection() {
   const regions = await listRegions()
   const honduras = regions?.find((r: any) => r.name === "Honduras")
 
-  const promoImages = [
-    honduras?.metadata?.promo_image_url_1,
-    honduras?.metadata?.promo_image_url_2,
-    honduras?.metadata?.promo_image_url_3,
-    honduras?.metadata?.promo_image_url_4,
-    honduras?.metadata?.promo_image_url_5,
-  ].filter(Boolean) as string[]
+  const promoImagesRaw = honduras?.metadata?.promo_image_urls as string | undefined
+
+  const promoImages = promoImagesRaw
+    ? promoImagesRaw.split(",").map((url) => url.trim()).filter(Boolean)
+    : []
 
   return (
     <div className="pt-4 pb-16 small:pt-6 small:pb-24">
